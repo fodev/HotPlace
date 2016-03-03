@@ -21,7 +21,7 @@ public class UserDao {
 				
 				int result=pstmt.executeUpdate();//데이터를 넣는 작업
 				if(result!=1){
-					throw new Exception();
+					throw new Exception();//회원가입이 잘못되면 예외 발생 .
 				}
 				
 			
