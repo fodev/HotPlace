@@ -8,7 +8,7 @@ public class UserInsertTest {
 	UserDomain user;
 	@Before
 	public void setUp() throws Exception {
-		user = new UserDomain("hyunjun", "0506", "hyun", "M");
+		//user = new UserDomain("hyunjun", "0506", "hyun", "M");
 		
 	}
 
@@ -16,7 +16,7 @@ public class UserInsertTest {
 	public void test() {
 		UserDao uDao=new UserDao();
 		try {
-			uDao.insertUser(user);
+			uDao.selectUser();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

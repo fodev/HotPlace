@@ -37,7 +37,7 @@ public abstract class AbstractExecutor {
 	}
 	
 	private void makeConnection()throws Exception{
-		con = DriverManager.getConnection("jdbc:oracle:thin:@192.168.0.34:1521:xe", "user14", "user14");
+		con = DriverManager.getConnection("jdbc:oracle:thin:@192.168.0.4:1521:xe", "Hyun", "inside501463");
 		
 		
 	}

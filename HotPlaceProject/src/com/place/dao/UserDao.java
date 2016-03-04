@@ -33,9 +33,9 @@ public class UserDao {
 	}
 
 	public void deleteUser(){}
-	public List<UserDomain> selectUser() throws Exception{		
-		String query = "select * from user16.tbl_user";
-		List<UserDomain> list =new ArrayList<>();
+	public void selectUser() throws Exception{		
+		String query = "select sysdate from dual";
+		//List<UserDomain> list =new ArrayList<>();
 		new AbstractExecutor() {
 
 			@Override
@@ -45,11 +45,11 @@ public class UserDao {
 
 				rs=pstmt.executeQuery();
 				while(rs.next()){
-					list.add(new UserDomain(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4)));
+					System.out.println(rs.getString(1));
 				}
 			}
 		}.executeJob();
-		return list;
+		//return list;
 	}
 
 
